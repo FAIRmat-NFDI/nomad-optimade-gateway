@@ -1,0 +1,3 @@
+[submodule "deps/optimade-python-tools"]
+	path = deps/optimade-python-tools
+	url = https://github.com/Materials-Consortia/optimade-python-tools.git
