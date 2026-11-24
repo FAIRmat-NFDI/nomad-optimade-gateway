@@ -1,0 +1,56 @@
+{
+    "debug": false,
+    "nomad_base_url": "https://nomad-lab.eu/backend/api/v1",
+    "insert_test_data": false,
+    "base_url": "http://localhost:5000",
+
+    "implementation": {
+        "name": "OPTIMADE Translation Service for NOMAD",
+        "source_url": "https://github.com/fekad/optimade-python-tools",
+        "issue_tracker": "https://github.com/fekad/optimade-python-tools/issues",
+        "homepage": "https://nomad-lab.eu",
+        "maintainer": {"email": "support@nomad-lab.eu"}
+    },
+
+    "provider": {
+        "prefix": "nomad",
+        "name": "NOMAD Repository and Archive",
+        "description": "NOMAD (Novel Materials Discovery) Laboratory data repository for computational materials science",
+        "homepage": "https://nomad-lab.eu"
+    },
+
+    "index_base_url": "http://localhost:5000",
+
+    "aliases": {
+        "structures": {
+            "id": "entry_id",
+            "last_modified": "last_processing_time",
+            "elements_ratios": "results.material.elemental_composition.atomic_fraction",
+            "chemical_formula_descriptive": "results.material.chemical_formula_descriptive",
+            "chemical_formula_reduced": "results.material.chemical_formula_reduced",
+            "chemical_formula_anonymous": "results.material.chemical_formula_anonymous",
+            "chemical_formula_hill": "results.material.chemical_formula_hill",
+            "elements": "results.material.elements",
+            "nelements": "results.material.n_elements",
+            "nperiodic_dimensions": "results.properties.structures.structure_original.nperiodic_dimensions",
+            "nsites": "results.properties.structures.structure_original.n_sites"
+        }
+    },
+
+    "provider_fields": {
+        "structures": [
+            "upload_id",
+            "upload_create_time"
+        ]
+    },
+
+    "length_aliases": {
+        "structures": {
+            "cartesian_site_positions": "nsites",
+            "species_at_sites": "nsites"
+        }
+    },
+
+    "page_limit": 100,
+    "page_limit_max": 10000
+}
